@@ -23,7 +23,7 @@ export const internarAPI = axios.create({
     },
 });
 
-const Axos_API = 'http://localhost:5000/';
+const Axos = 'http://localhost:5000/';
 
 export const Axos_API = axios.create({
     baseURL: INTERNAL_API, // Cambia esta URL por tu API

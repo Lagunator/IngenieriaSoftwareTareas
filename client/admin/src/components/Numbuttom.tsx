@@ -1,14 +1,16 @@
-import { FC } from 'react';
+import { FunctionComponent as FC } from 'react';
 import Button from '@mui/material/Button';
 
-interface NumberButtonProps {
+type NumButtonProps = {
   value: number;
-  onClick: (value: number) => void;
-}
+  onClick: (num: number) => void;
+};
 
-const NumberButton: FC<NumberButtonProps> = ({ value, onClick }) => {
+const NumberButton: FC<NumButtonProps> = ({ value, onClick }) => {
+  const handleClick = () => onClick(value);
+
   return (
-    <Button variant="contained" onClick={() => onClick(value)}>
+    <Button variant="contained" onClick={handleClick}>
       {value}
     </Button>
   );
