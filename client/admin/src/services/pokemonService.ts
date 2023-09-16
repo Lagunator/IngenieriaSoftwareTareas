@@ -1,6 +1,6 @@
 import { pokeAPI, internarAPI} from "./apis";
 
-export const getPokemonById = async (pokemonId) => {
+export const getPokemonById = async (pokemonId: any) => {
     const pokemonData  = await pokeAPI.get(`/pokemon/${pokemonId}`)
     console.log("🚀 ~ file: pokemonService.ts:6 ~ getPokemonById ~ pokemonData:", pokemonData)
     return pokemonData.data;
